@@ -21,6 +21,15 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>angular-material-dark-theme-switcher</span>
+      <button
+        type="button"
+        role="switch"
+        [attr.aria-checked]="isDarkModeEnabled()"
+        aria-label="Toggle dark mode"
+        mat-icon-button
+        (click)="toggleTheme()">
+        <mat-icon>{{darkModeIcon()}}</mat-icon>
+      </button>
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>
